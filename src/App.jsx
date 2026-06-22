@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { PresentationProvider } from './contexts/PresentationContext';
 import Header from './components/layout/Header';
 import Home from './pages/Home';
@@ -9,7 +9,7 @@ import Session4 from './pages/Session4';
 
 export default function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter>
       <PresentationProvider>
         <div className="light-theme min-h-screen bg-slate-950 flex flex-col">
           <Header />
@@ -48,6 +48,6 @@ export default function App() {
           </footer>
         </div>
       </PresentationProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
