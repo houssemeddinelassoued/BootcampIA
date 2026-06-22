@@ -9,7 +9,7 @@ import Session4 from './pages/Session4';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <PresentationProvider>
         <div className="light-theme min-h-screen bg-slate-950 flex flex-col">
           <Header />
