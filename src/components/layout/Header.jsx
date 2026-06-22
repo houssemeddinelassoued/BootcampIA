@@ -26,16 +26,16 @@ export default function Header() {
           {SESSIONS.map(s => {
             const active = sessionId === s.id;
             const colors = {
-              violet:  active ? 'bg-blue-500/20 text-blue-300 border-blue-500/40' : 'text-slate-500 hover:text-slate-300',
-              blue:    active ? 'bg-blue-500/20 text-blue-300 border-blue-500/40' : 'text-slate-500 hover:text-slate-300',
-              orange:  active ? 'bg-orange-500/20 text-orange-300 border-orange-500/40' : 'text-slate-500 hover:text-slate-300',
-              emerald: active ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40' : 'text-slate-500 hover:text-slate-300',
+              violet:  active ? 'bg-blue-100 text-blue-900 border-blue-300' : 'text-slate-600 hover:text-slate-900',
+              blue:    active ? 'bg-blue-100 text-blue-900 border-blue-300' : 'text-slate-600 hover:text-slate-900',
+              orange:  active ? 'bg-orange-100 text-orange-900 border-orange-300' : 'text-slate-600 hover:text-slate-900',
+              emerald: active ? 'bg-emerald-100 text-emerald-900 border-emerald-300' : 'text-slate-600 hover:text-slate-900',
             };
             return (
               <button
                 key={s.id}
                 onClick={() => navigate(`/session/${s.id}`)}
-                className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border transition-all whitespace-nowrap ${active ? `${colors[s.color]} border` : 'border-transparent hover:bg-slate-800'}`}
+                className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border transition-all whitespace-nowrap ${active ? `${colors[s.color]} shadow-sm` : 'border-transparent hover:bg-slate-200'}`}
                 aria-current={active ? 'page' : undefined}
               >
                 <span>{s.emoji}</span>
